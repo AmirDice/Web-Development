@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="top-blog">
+    <h1>Blog Single
+        
+        <!-- $ python manage.py runserver -->
+    </h1>
+</div>
+        <section class="single-blog" style="margin-top: 20px;">
+            <div class="container">
+                <div class="row" style="display: flex; flex-direction: row-reverse;">
+                    <div class="col-12  col-xl-4 col-lg-5 col-sm-12">
+                        <div class="right-side-bar">
+                            
+                            <h4>Search <input  type="text"><button><i class="fas fa-search"></i></button></h4>
+                            <div class="categories mb-4">
+                                <h3 id="mainh">Categories</h3>
+                                <h3  id="aa">Categories <i class="fas fa-chevron-down"></i></h3>
+                                <div class="line"></div>
+                                <ul  class="main">
+                                    <li><a href="#"><img style="width: 25px; height:25px; margin-right:5px;" src={% static "media/aaa5.png" %} alt="">
+ Environment</a></li>
+                                    <li><a href="#"><img style="width: 25px; height:25px; margin-right:5px;" src={% static "media/aaa6.png" %} alt=""> Weather</a></li>
+                                    <li><a href="#"> <img style="width: 25px; height:25px; margin-right:5px;" src={% static "media/aaa7.png" %} alt=""> Clean and Clear</a></li>
+                                    <li><a href="#"><img  style="width: 25px; height:25px; margin-right:5px;"src={% static "media/aaa8.png" %} alt=""></i>Animals</a></li>
+                                    <li><a href="#"> <img style="width: 25px; height:25px; margin-right:5px;" src={% static "media/aaa9.png" %} alt=""> Photography</a></li>
+                                </ul>
+                                <ul  class="dro-cat">
+                                    <li><a href="#"><img src={% static "media/aaa5.png" %} alt="">Environment</a></li>
+                                    <li><a href="#"><img src={% static "media/aaa6.png" %} alt=""> iWeather</a></li>
+                                    <li><a href="#"><img src={% static "media/aaa7.png" %} alt=""> Clean and Clear</a></li>
+                                    <li><a href="#"><img src={% static "media/aaa8.png" %} alt=""> Animals</a></li>
+                                    <li><a href="#"><img src={% static "media/aaa9.png" %} alt=""> Photography</a></li>
+                                </ul>
+                            </div>
+                            <div class="recent-post mb-3">
+                                <h3 class="hmain">Recent Posts</h3>
+                                <h3 class="bb" >Recent Posts<i class="fas fa-chevron-down"></i></h3>
+                                <div class="line"></div>
+                                <ul class="dro-pos">
+                                    <li class="mb-3 mt-3"><a href="#">
+                                            <div class="col-12">
+                                        <div class="row">
+
+                                                <div class="col-5">
+                                                    <img src= {% static "media/blog-gallery-1.jpg" %}>
+                                                </div>
+                                                <div class="col-7 px-2 py-2">
+                                                    Pellentesque suscipit ante at <br>
+                                                <img  src={% static "media/bbb4.png" %} alt="">
+                                                18 Jun 2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </a></li>
+                                    <li class="mb-3"><a href="#">
+                                        <div class="col-12">
+                                    <div class="row">
+
+                                            <div class="col-5">
+                                                <img style=  " width:100%" src={% static "media/blog-gallery-1.jpg" %}alt="" >
+                                            </div>
+                                            <div class="col-7 px-2 py-2">
+                                                Pellentesque suscipit ante at <br>
+                                            <img src={% static "media/bbb4.png" %} alt="" style="width: 15%; height:15% !important">
+                                            18 Jun 2020
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </a></li>
+                                <li class="mb-3"><a href="#">
+                                    <div class="col-12">
+                                <div class="row">
+
+                                        <div class="col-5">
+                                            <img style=" width:100%" src={% static "media/blog-gallery-1.jpg" %} alt="" >
+                                        </div>
+                                        <div class="col-7 px-2 py-2">
+                                            Pellentesque suscipit ante at <br>
+                                                                                   <img style="width: 15px; height:15px"" src={% static "media/bbb4.png" %} alt="">
+
+                                        18 Jun 2020
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </a></li>
+                                </ul>
+                                <ul class="main py-3">
+                                    <li class="mb-3"><a href="#">
+                                            <div class="col-12">
+                                        <div class="row">
+
+                                                <div class="col-5">
+                                                    <img style=" width:100%" src= {% static "media/blog-gallery-1.jpg" %}alt="" >
+                                                </div>
+                                                <div class="col-7 px-2 py-2">
+                                                    Pellentesque suscipit ante at <br>
+                                                                                            <img style="width: 15px; height:15px"" src={% static "media/bbb4.png" %} alt="">
+
+                                                18 Jun 2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </a></li>
+                                    <li class="mb-3"><a href="#">
+                                        <div class="col-12">
+                                    <div class="row">
+
+                                            <div class="col-5">
+                                                <img style=" width:100%" src={% static "media/blog-gallery-1.jpg" %}alt="" >
+                                            </div>
+                                            <div class="col-7 px-2 py-2">
+                                                Pellentesque suscipit ante at <br>
+                                                                                       <img style="width: 15px; height:15px"" src={% static "media/bbb4.png" %} alt="">
+
+                                            18 Jun 2020
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </a></li>
+                                <li class="mb-3"><a href="#">
+                                    <div class="col-12">
+                                <div class="row">
+
+                                        <div class="col-5">
+                                            <img style=" width:100%" src={% static "media/blog-gallery-1.jpg" %}alt="" >
+                                        </div>
+                                        <div class="col-7 px-2 py-2">
+                                            Pellentesque suscipit ante at <br>
+                                                                                   <img style="width: 15px; height:15px"" src={% static "media/bbb4.png" %} alt="">
+
+                                        18 Jun 2020
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-8 col-lg-7 col-md-12">
+                            <div class="all-single-blog ">
+                                <div class="blog-single-img">
+                                <img src={% static "media/blog-single-right-sidebar.jpg" %} alt="">
+                            </div>
+                                <div class="black-bot">
+                                <div class="black-desc">
+                                    <h3 class="desc-head">{{ post.title }}</h3>
+                                    <div class="desc-addition">
+                                                                                <img style="width: 20px; height:20px" src={% static "media/bbb4.png" %} alt="">
+
+                                        <p>{{ post.created_at|timesince }} ago</p>
+                                                        <img style="width: 20px; height:20px" src={% static "media/bbb5.png" %} alt="">
+
+                                        <p>{{ post.author.username }}</p>
+                                        {% if user.is_authenticated %}
+                                            {% if user.id == post.author.id %}
+                                            <small>
+                                            <a href="{% url 'updatepost' post.pk %}" class="btn btn-outline-success">Edit</a>
+                                            <a href="{% url 'deletepost' post.pk %}" class="btn btn-outline-success">Delete</a>
+                                        </small>
+                                            {% endif %}
+                                        {% else %}
+                                        <small></small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-all-info">
+                                <div class="single-info">
+                                    <p> {{ post.intro }}
+                                        <br>
+                                        <br>
+                                        {{ post.body | safe }}</p>
+                                    <hr>
+                                    <h5 class="mt-4">Benefits of Blog</h5>
+                                    <ul class="benefits">
+                                        <li>
+                                                                                        <img src={% static "media/aaa12.png" %} alt="">
+ Duis venenatis eros id libero imperdiet consectetur Lorem ipsum dolor sit amet</li>
+                                        <li>
+                                                                                    <img src={% static "media/aaa12.png" %} alt="">
+Duis venenatis eros id libero imperdiet consectetur Lorem ipsum dolor sit amet</li>
+                                        <li>
+                                                                                    <img src={% static "media/aaa12.png" %} alt="">
+ Duis venenatis eros id libero imperdiet consectetur Lorem ipsum dolor sit amet</li
+                                        <li>
+                                                                                    <img src={% static "media/aaa12.png" %} alt="">
+ Duis venenatis eros id libero imperdiet consectetur Lorem ipsum dolor sit amet</li>
+                                    </ul>
+                                    <hr>
+                                    <h5 class="mt-4">Photo Gallery</h5>
+                                    <div class="blog-pictures">
+                                        <div class="single-slide">
+                                            <img src={% static "media/blog-gallery-1.jpg" %} alt="">
+
+                                        </div>
+                                        <div class="single-slide">
+                                            <img src={% static "media/blog-gallery-1.jpg" %} alt="">
+
+                                        </div>
+                                        <div class="single-slide">
+                                            <img src={% static "media/blog-gallery-1.jpg" %}alt="">
+
+                                        </div>
+                                        <div class="single-slide">
+                                            <img src={% static "media/blog-gallery-1.jpg" %}alt="">
+
+                                        </div>
+                                        <div class="single-slide">
+                                            <img src={% static "media/blog-gallery-1.jpg" %} alt="">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p>Everything we do is bound by unique creativity and technology driven campaign
+                                        strategies that yield the strongest results. With ambitious targets to hit, the
+                                        tree are well-equipped to drive Conspicuous to new levels of success.</p>
+
+                                    <div class="social-network">
+                                        <a  href="#">
+                                            <img style="width: 20px; height:20px;" src={% static "media/aaa13.png" %} alt="">
+                                        </a>
+                                        <a  href="#">
+                                            <img style="width: 20px; height:20px; margin:0 5px;" src={% static "media/aaa14.png" %} alt="">
+                                        </a>
+                                        <a  href="#">
+                                            <img style="width: 20px; height:20px;" src={% static "media/aaa15.png" %} alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments mt-4 px-4">
+                            <h3 class="py-3">Comments</h3>
+                            {% if not post.comments.all %}
+                            No Comments Yet...
+                            <a href="{% url 'add_comment' post.pk %}"> Add Comment.. </a>
+                            {% else %}
+                                {% for comment in post.comments.all %}
+                                <div class="single-comment py-2">
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img class= "prof-img"  src={% static "media/comment-1.jpg" %} alt="">
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="comment-inside">
+                                                <h6 style="font-style: oblique; font-weight: 600;">{{ comment.date_added }}</h6>
+                                                <p class="com-date">{{ comment.name }}</p>
+                                                <p>{{ comment.body }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    
+                                {% endfor %}
+                                <a href="{% url 'add_comment' post.pk %}"> Add Comment.. </a>
+                            {% endif %}
+                            </div>
+                            
+                        <div class="leave-comment mt-5 px-4 mb-1">
+                            <h3>Leave a Comment</h3>
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <textarea name="" id="" rows="10" placeholder="body">{{ comment.body}}</textarea>
+                                            <div class="comment-input">
+                                                <div class="col-12">
+                                                    <div class="row">
+
+                                                        <div class="col-4"><input placeholder="Name" type="text"> {{ comment.name}} </div>
+                                                        <div class="col-4"><input placeholder="Email" type="text">{{ comment.email }}</div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <button class="submit-but"> <img src="media/aaa16.png" alt=""> Submit</button>
+
+                                        </div>
+
+                                    </div>
+                            </form>
+                </div>
+            </div>
+
+        </section>
+
+        
+
+        <script src="{% static 'Vendors/Jquery/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'Vendors/Slick/slick.js' %}"></script>
+
+        <script src="{% static 'Js/Main.js' %}"></script>
+{% endblock content %}

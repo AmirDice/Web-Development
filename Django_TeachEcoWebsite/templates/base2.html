@@ -1,0 +1,216 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- custom css & js-->
+    <link rel="stylesheet" href="{% static 'quizes/mstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'quizes/Vendors/bootstrap.css' %}">
+    <head>
+        
+
+
+        <!-- <link href="{% static 'fontawesome-free-5.15.4-web/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesome-free-5.15.4-web/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesome-free-5.15.4-web/css/solid.css' %}" rel="stylesheet" type="text/css"> -->
+        <!--font awesome link-->
+        <!-- <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' %}" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+
+        <!-- <link
+        rel="stylesheet"
+        href={ % static 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' %}
+        integrity={ %static 'sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' %}
+        crossorigin= {%static 'anonymous' }> -->
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+            crossorigin="anonymous"></script>
+
+        <!--custom css-->
+        <link rel="stylesheet" href="{% static 'navbarstyl.css' %}">
+        <link rel="stylesheet" href="{% static 'mstyle.css' %}">
+
+        <link rel="stylesheet" href="{% static 'Vendors/bootstrap.css' %}">
+        <!-- Font Awesome 5 CDN link to add social icons in html5 registration form -->
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+
+        <script src="{% static 'Js/Main.js' %}"></script>
+        <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    </head>
+<body>
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+    <title>quiz app| {% block title %}{% endblock title %}</title>
+  </head>
+
+
+  <body>
+    <header>
+      <div class="wrapper" id="wrapper">
+          <nav style="padding: 0px; width: 100%;">
+              <input type="checkbox" id="show-search">
+              <input type="checkbox" id="show-menu">
+              <label for="show-menu" class="menu-icon">
+                  <!-- <i class="fas fa-bars"></i> -->
+              </label>
+              <div class="content">
+                  <div class="logo">
+                      <a href="/home">
+                          <img src={% static "media/teachecologo4.png" %} alt=""></a>
+                  </div>
+                  {% if user.is_authenticated %}
+                  <ul class="links">
+                      <li>
+                          <a href="/blog">blog</a>
+                      </li>
+                      <li>
+                          <a href="/quiz">quiz</a>
+                      </li>
+                      <li>
+                          <a href="singlechallenge">challenges</a>
+                      </li>
+                      <li>
+                          <a href="#about">about</a>
+                      </li>
+                      <li>
+                          <a href="/contact">contact</a>
+                      </li>
+                       <li>
+                          <a href="#dbox">donate</a>
+                      </li>
+                   
+                      <li>
+                          <a href="addpost">add post</a>
+                      </li>
+                      <li>
+                      <span  style="font-size: 18px;" class="hello-msg">{{request.user}}
+                                              <img class="aaa2" src={% static "media/aaa2.png" %} alt="">
+  
+                          
+                                              
+                                              <ul  class="login-drop">
+                              <li>
+                                  <a href="editprofile">profile</a>
+                              </li> 
+                              <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+                          </ul>
+                      </span>
+                  
+                      </li>
+                  {% else %}
+                  <ul class="links">
+                      <li>
+                          <a href="/blog">blog</a>
+                      </li>
+                      <li>
+                          <a href="/quiz">quiz</a>
+                      </li>
+                      <li>
+                          <a href="singlechallenge">challenges</a>
+                      </li>
+                      <li>
+                          <a href="#about">about</a>
+                      </li>
+                      <li>
+                          <a href="/login">signup</a>
+                      </li>
+                      <li>
+                          <a href="/contact">contact</a>
+                      </li>
+                       <li>
+                          <a href="#dbox">donate</a>
+                      </li>
+  
+                      <!-- <a href="#" class="desktop-link">Challanges</a> <input type="checkbox"
+                      id="show-challanges"> <label for="show-challanges">Challenges</label> <ul>
+                      <li><a href="#">Challange 1</a></li> <li><a href="#">Challange 2</a></li> <li><a
+                      href="#">Challange 3</a></li> <li><a href="#">Challange 4</a></li> </ul> </li>
+                      <li> <a href="#" class="desktop-link">Blog</a> <input type="checkbox"
+                      id="show-blog"> <label for="show-blog">Blog</label> <ul> <li><a href="#">Blog
+                      1</a></li> <li><a href="#">Blog 2</a></li> <li><a href="#">Blog 3</a></li> <li>
+                      </ul> </li> </ul> </li> </ul>-->
+                  </div>
+                  {% endif %}
+                  <label for="show-search" class="search-icon">
+                      <img src={% static "media/aaa1.png" %} alt="">
+                  </label>
+                  <form action="#" class="search-box">
+                      <input
+                          type="text"
+                          placeholder="Type Something to Search..."
+                          required="required">
+                      <button type="submit" class="go-icon">
+                                                                      <img src={% static "media/aaa3.png" %} alt="">
+  
+                      </button>
+                  </form>
+              </nav>
+             
+              
+      </div>
+      </header>
+
+    <div class="container mt-3">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <section class="footer">
+
+      <div class="box-container">
+  
+          <div class="box">
+              <a href="#" class="logo">
+                                                          <img src={% static "media/aaa4.png" %} alt="">
+   TeachEco</a>
+              <p>write something here!</p>
+          </div>
+  
+          <div class="box">
+              <h3 class="share">share</h3>
+              <a href="https://facebook.com">facebook</a>
+              <a href="https://twitter.com">twitter</a>
+              <a href="https://instagram.com">instagram</a>
+              <a href="https://github.com">github</a>
+          </div>
+  
+          <div class="box">
+              <h3 class="letter">newsletter</h3>
+              <form action="">
+                  <input type="email" placeholder="enter your email">
+                  <button type="submit" class="fas fa-paper-plane"></button>
+              </form>
+          </div>
+  
+      </div>
+  
+      <h1 class="credit">created by
+          <span>
+              TeachEco Inc</span>
+          | Copyright, all rights reserved.
+      </h1>
+      <script src="{% static 'Js/Main.js' %}"></script>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+
+<!-- header section -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'navbarstyl.css'%">
+        <div class="wrapper" id="wrapper">
+            <nav style="padding: 0px; width: 100%;">
+                <input type="checkbox" id="show-search">
+                <input type="checkbox" id="show-menu">
+                <label for="show-menu" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <div class="content">
+                    <div class="logo">
+                        <a href="">
+                            <img src={% static "media/teachecologo4.png" %} alt=""></a>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="blog">blog</a>
+                        </li>
+                        <li>
+                            <a href="signup">signup</a>
+                        </li>
+                        <li>
+                            <a href="#dbox">donate</a>
+                        </li>
+                        <li>
+                            <a href="#about">about</a>
+                        </li>
+                        <li>
+                            <a href="quiz">quiz</a>
+                        </li>
+                        <li>
+                            <a href="#News">Challenges</a>
+                        </li>
+                         <li>
+                            <a href="contact">contact</a>
+                        </li>
+
+                        <div class="center">
+                            <input type="checkbox" id="show">
+                            <label for="show" class="show-btn">Login</label>
+                            <div class="logincontainer">
+                                <label for="show" class="close-btn fas fa-times" title="close"></label>
+                                <div class="text">
+                                    Login
+                                </div>
+                                <form action="#">
+                                    <div class="data">
+                                        <label>Email or Phone</label>
+                                        <input type="text" required="required">
+                                    </div>
+                                    <div class="data">
+                                        <label>Password</label>
+                                        <input type="password" required="required">
+                                    </div>
+                                    <div class="forgot-pass">
+                                        <a href="#">Forgot Password?</a>
+                                    </div>
+                                    <div class="loginbtn">
+                                        <div class="inner"></div>
+                                        <button type="submit">login</button>
+                                    </div>
+                                    <div class="signup-link">
+                                        Not a member?
+                                        <a href="signup.htm">Signup now</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- <a href="#" class="desktop-link">Challanges</a> <input type="checkbox"
+                        id="show-challanges"> <label for="show-challanges">Challenges</label> <ul>
+                        <li><a href="#">Challange 1</a></li> <li><a href="#">Challange 2</a></li> <li><a
+                        href="#">Challange 3</a></li> <li><a href="#">Challange 4</a></li> </ul> </li>
+                        <li> <a href="#" class="desktop-link">Blog</a> <input type="checkbox"
+                        id="show-blog"> <label for="show-blog">Blog</label> <ul> <li><a href="#">Blog
+                        1</a></li> <li><a href="#">Blog 2</a></li> <li><a href="#">Blog 3</a></li> <li>
+                        </ul> </li> </ul> </li> </ul>-->
+                    </div>
+                    <label for="show-search" class="search-icon">
+                        <i  class="fas fa-search"></i>
+                    </label>
+                    <form action="#" class="search-box">
+                        <input
+                            type="text"
+                            placeholder="Type Something to Search..."
+                            required="required">
+                        <button type="submit" class="go-icon">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </button>
+                    </form>
+                </nav>
+
+
+        </div>
+
+    </div>

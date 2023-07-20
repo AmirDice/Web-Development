@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load sass_tags %}
+        <section class="blogs">
+            <div class="top-blog">
+                        <h1>Our Blog
+                </h1>
+            </div>
+            <div class="blog-list my-5 ">
+                <div class="container">
+                    <div class="row">
+                    {% for post in object_list %}
+                        <div class="col-lg-6 col-md-6 col-12 mb-5">
+                            <div class="blog-sing">
+                                <div class="all-img">
+                                    <img src={% static "media/blog-2-col-1.jpg" %} alt="">
+                                    <div id="enter" class="ent">
+                                        <div class="line-vert"></div>
+                                    </div>
+                                    <div id="sec-enter">
+                                        <div class="sec-line-vert"></div>
+
+                                    </div>
+                                    <div class="img-hover"></div>
+                                </div>
+
+                                <div class="black-bot">
+                                    <div class="black-desc">
+                                        <h3 class="desc-head">{{ post.title }}</h3>
+                                        <div style="display: flex;" class="desc-addition">
+                                            <img style="width: 14px; height:14px;" src={% static "media/bbb4.png" %} alt="">
+                                            <p>{{ post.created_at }}</p>
+                                            <img  style="width: 14px; height:14px;" src={% static "media/bbb5.png" %} alt="">
+                                            <p>{{ post.author.username }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-blog">
+                                    <div class="inside-blog">
+                                        <p>{{ post.intro }}
+
+                                        </p>
+                                    {% if user.is_authenticated %}
+                                            {% if user.id == post.author.id %}
+                                            <div class="button-blog d-flex">
+                                                <a href="{% url 'blog-single' post.pk %}">Read More</a>
+                                                <div><a style="left:45%" href="{% url 'updatepost' post.pk %}">Edit</a></div>
+                                                <div><a style="left:60%" href="{% url 'deletepost' post.pk %}">Delete</a></div>
+                                            </div>
+                                            {% else %}
+                                            <div class="button-blog d-flex">
+                                                <a href="{% url 'blog-single' post.pk %}">Read More</a>
+                                            </div>
+                                            {% endif %}
+                                    {% else %}
+                                            <div class="button-blog d-flex">
+                                                <a href="{% url 'blog-single' post.pk %}">Read More</a>
+                                            </div>
+                                    {% endif %}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div id="load-more" style="text-align: center;">
+                    <button >Load More</button>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="{% static 'Vendors/Jquery/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'Vendors/Slick/slick.js' %}"></script>
+        <script src="{% static 'Js/Main.js' %}"></script>
+{% endblock content %}

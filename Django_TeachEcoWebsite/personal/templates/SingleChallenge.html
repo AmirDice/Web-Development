@@ -1,0 +1,249 @@
+{% extends 'base3.html' %}
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoTeach</title>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+
+        <!-- <link rel="stylesheet" href="{% static 'Css/style.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'Vendors/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'Vendors/Slick/slick.css' %}">
+        <link rel="stylesheet" href="{% sass_src 'mstyle.scss' %}">
+        <!-- <link rel="stylesheet" href="{% static 'mstyle.css' %}"> -->
+        <!-- <link href="{{ STATIC_URL }}mstyle.css" rel="stylesheet" type="text/css" media="all" /> -->
+    </head>
+
+    <body>
+        <div class="top-single-challenge">
+            <div class="back-top"></div>
+            <h1>Let's take a step in favor of nature
+            </h1>
+        </div>
+        <section>
+            <div class="whole-top"></div>
+            <div class="sub-whole-challenge">
+                <div class="container">
+                    <div class="course-name">
+                        <h3>Plantation</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6 " style="border-right: 1px solid rgba(128, 128, 128, 0.524);">
+                            <h4>Tasks</h4>
+
+                            <div class="left-sing-challenge">
+                                <ul>
+                                    <li id="a">
+                                        <div class="left">
+                                            <i class="fas fa-tree"></i>
+                                            <span>Planting</span>
+                                        </div>
+                                        
+                                        <div class="right">
+                                            
+                                            {% if form.save %}
+                                                <span class="complete">Completed</span>
+                                            {% else %}
+                                                <span class="incomple">incompleted</span>
+                                            {% endif %}
+                                            <span>20</span>
+                                            <i class="far fa-sun"></i>
+                                        </div>
+                                    </li>
+                                    <li id="b">
+                                        <div class="left">
+                                            <i class="fas fa-tint"></i>
+                                            <span>Watering</span>
+                                        </div>
+                                        <div class="right">
+                                            {% if not form.save %}
+                                            <span class="incomple">incompleted</span>
+                                            {% else %}
+                                            <span class="complete">Completed</span>
+                                            {% endif %}
+                                            <span>20</span>
+                                            <i class="far fa-sun"></i>
+                                        </div>
+                                    </li>
+                                    <li id="c">
+                                        <div class="left">
+                                            <i class="fas fa-trash-alt"></i>
+                                            <span>Gathering trash</span>
+                                        </div>
+                                        <div class="right">
+                                            {% if not form.save %}
+                                            <span class="incomple">incompleted</span>
+                                            {% else %}
+                                            <span class="complete">Completed</span>
+                                            {% endif %}
+                                            <span>20</span>
+                                            <i class="far fa-sun"></i>
+                                        </div>
+                                    </li>
+
+                                    <li id="d">
+                                        <div class="left">
+                                            <i class="fab fa-pagelines"></i>
+                                            <span>Take care of small trees</span>
+                                        </div>
+                                        <div class="right">
+                                            {% if not form.save %}
+                                            <span class="incomple">incompleted</span>
+                                            {% else %}
+                                            <span class="complete">Completed</span>
+                                            {% endif %}
+                                            <span>20</span>
+                                            <i class="far fa-sun"></i>
+                                        </div>
+                                    </li>
+
+                                    <li id="e">
+                                        <div class="left">
+                                            <i class="fas fa-comments"></i>
+                                            <span>Spread information</span>
+                                        </div>
+                                        <div class="right">
+                                            {% if not form.save %}
+                                            <span class="incomple">incompleted</span>
+                                            {% else %}
+                                            <span class="complete">Completed</span>
+                                            {% endif %}
+                                            <span>20</span>
+                                            <i class="far fa-sun"></i>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="right-sing-challenge">
+                                <h4>Description
+                                    <i id="inf" class="far fa-question-circle"></i>
+                                </h4>
+                                <div class="inside-challenge">
+                                    <p style="border: none;" id="inf-desc">This is description section. You can see information about
+                                        tasks and when you complete your task you should click complete and upload your
+                                        pictures.So points add your score.</p>
+                                    <p style="border: none;" id="initial">Please click on tasks and read what you should do for gathering points.
+                                    </p>
+
+                                
+
+                                    <div id="ad" class="but-challenge">
+                                        <p >This is your first task.If you want to get 20 points you have to plant 5
+                                            trees and water them.
+
+                                        </p>
+                                        <form action="." method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            {{form.as_p}}  
+                                        <button type="submit" class="btn btn-lg btn-success">Upload & Complete</button>
+                                        <!-- <button style="margin-right: 10px;">Upload pictures</button>
+                                        <button class="compbut">Complete Task</button> -->
+                                    </div>
+                                    </form>
+                                <!-- {% if obj %}
+                                    <h3>Succesfully uploaded : {{img_obj.caption}}</h3>
+                                    <img src="{{ obj.image.url}}" alt="image" class="img-thumbnail" >
+                                    {% endif %}
+                                    <hr>
+
+                                    {% for x in img %}
+                                    {% if forloop.first %}<div class="row ">{% endif %}
+                                        <div class="col-lg-4 col-md-4 col-12" >
+                                    <div class="text-center mt-2">
+                                        <img src="{{x.image.url}}" height="70%" width="70%" class="img-thumbnail" alt="...">
+                                        <h2 class="text-center" >{{x.caption}}</h2></div>
+                                        </div>
+                                        {% if forloop.counter|divisibleby:3 %}
+                                    </div>
+                                    <div class=row>{% endif %}
+                                        {% if forloop.last %}</div>{% endif %}
+
+                                    {% endfor %} -->
+
+                                    <img src="{{ Image.image.url }}"/>
+
+
+
+
+
+
+
+                                   
+                                    <div id="bd" class="but-challenge">
+                                        <p>
+                                            Give water 15 small and 7 big trees
+                                        </p>
+                                    <form action="." method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {{form.as_p}}   
+                                        <button type="submit" class="btn btn-lg btn-success">Upload & Complete</button>
+                                        <!-- <button style="margin-right: 10px;">Upload pictures</button>
+                                        <button class="compbut">Complete Task</button> -->
+                                    </div>
+                                    </form>
+
+                                    
+                                    <div id="cd" class="but-challenge">
+                                        <p>Gather 2kg trash from green zone
+                                        </p>
+                                        <form action="." method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            {{form.as_p}}  
+                                        <button type="submit" class="btn btn-lg btn-success">Upload & Complete</button>
+                                        <!-- <button style="margin-right: 10px;">Upload pictures</button>
+                                        <button class="compbut">Complete Task</button> -->
+                                    </div>
+                                    </form>
+
+                                     
+                                    <div id="dd" class="but-challenge">
+                                        <p >Clean rotten branches from small trees for growing
+                                        </p>
+                                        <form action="." method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            {{form.as_p}}  
+                                        <button type="submit" class="btn btn-lg btn-success">Upload & Complete</button>
+                                        <!-- <button style="margin-right: 10px;">Upload pictures</button>
+                                        <button class="compbut">Complete Task</button> -->
+                                    </div>
+                                    </form>
+
+                                     
+                                    <div id="ed" class="but-challenge">
+                                        <p >Spread information with 3 friends of yours
+                                        </p>
+                                        <form action="." method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            {{form.as_p}}  
+                                        <button type="submit" class="btn btn-lg btn-success">Upload & Complete</button>
+                                        <!-- <button style="margin-right: 10px;">Upload pictures</button>
+                                        <button class="compbut">Complete Task</button> -->
+                                    </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{% static 'Vendors/Jquery/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'Js/SGscr.js' %}"></script>
+    </body>
+{% endblock content %}
+</html>

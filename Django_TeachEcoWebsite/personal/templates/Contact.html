@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+
+{% block content %}
+<div class="top-challenge">
+    <div class="back-top"></div>
+    <h1>Contact Us
+    </h1>
+    </div>
+    <section class="box-cont">
+        <div class="container">
+            <div class="top-sub">
+                <h1>Have Questions?</h1>
+                <h1>Get in touch!</h1>
+                <p>Email or Call us for any questions or inquiries.
+                </p>
+            </div>
+            <div class="boxes-sub">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="message-sub">
+                            <a href="#">
+                         <img  src={% static "media/aaa19.png" %} alt="">
+
+                                <h4>Email Us</h4>
+                                <div class="mes-line">
+                                    <a class="email-a" href="#">teacheco@gmail.com</a>
+                                    <div class="line"></div>
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="call-sub">
+                            <a href="#">
+                                <img src={% static "media/aaa20.png" %} alt="">
+                                <h4>Call Us</h4>
+                                <div class="mes-line">
+                                <span>+1 804 841 25 69</span>
+
+                                    <div class="line"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact-form">
+        <div class="fon" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-sm-12 col-md-12">
+                        <div class="all-right-form">
+                            <div class="right-form">
+                                <h1>
+                                    Contact Form
+                                </h1>
+                                <div class="name-form">
+                                    <img src={% static "media/aaa11.png" %} alt="">
+                                    <input class="aka" placeholder="Name" type="text">
+                                    <div class="line"><div class="newline"></div> </div>
+                                </div>
+                                <div class="email-form">
+                                <img class="import" src={% static "media/aaa19.png" %} alt="">
+                                    <input class="aka" placeholder="Email Address" type="text">
+                                    <div class="line"><div class="newline"></div> </div>
+
+                                </div>
+                                <div class="message-form">
+                                    <img class="import" src={% static "media/aaa21.png" %} alt="">
+                                    <input class="aka pb-4" placeholder="How can we help you? Feel free to get in touch" type="text">
+                                    <div class="line"><div class="newline"></div> </div>
+                                </div>
+                                <div class="check-form d-flex">
+                                    <input  type="checkbox">
+                                    <p>I agree that my submitted data is being collected and stored.</p>
+                                </div>
+                                <a class="getbut" href="#"><i class="fab fa-telegram-plane"></i>Get In Touch</a>
+                                 
+
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="col-12 col-lg-6 col-sm-12 col-md-12">
+                        <div class="left-form">
+                            <h6>Contact Us</h6>
+                            <h1>Have Questions?<br>
+                                Get in touch!</h1>
+                                <p>785 15h Street, Office 478 <br>
+                                    Berlin, De 81566</p>
+                                    <div class="for">
+                                        <a class="email-foa" href="#">info@email.com</a>
+                                        <div class="line"></div>
+                                    </div>
+                                    <h4>+1 840 841 25 69</h4>
+                                    <div class="icons-cont">
+                                        <a href="#">
+                                        <img style="width: 25px; height:25px;" src={% static "media/aaa13.png" %} alt="">
+                                        </a>
+                                        <a href="#">
+                                        <img style="width: 25px; height:25px; margin:0 7px;" src={% static "media/bbb6.png" %} alt="">
+                                        </a> 
+                                        <a href="#">
+                                            <img style="width: 25px; height:25px;" src={% static "media/aaa15.png" %} alt="">
+                                        </a>
+                                    </div>
+                            
+                        </div>
+                   
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     
+    </section>
+
+    <script src="{% static 'Vendors/Jquery/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'Vendors/Slick/slick.js' %}"></script>
+
+    <script src="{% static 'Js/Main.js' %}"></script>
+{% endblock content %}

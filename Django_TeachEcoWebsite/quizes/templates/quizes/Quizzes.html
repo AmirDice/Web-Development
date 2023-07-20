@@ -1,0 +1,514 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load sass_tags %}
+    <div class="top-challenge">
+        <div class="back-top"></div>
+        <h1>Quizzes
+        </h1>
+    </div>
+    <section class="quizzes">
+        <div class="container">
+            <div class="all-quizzes">
+                <!-- class="btn btn-link modal-button"
+        data-pk="{{obj.pk}}"
+        data-quiz="{{obj.name}}"
+        data-questions="{{obj.number_of_questions}}"
+        data-difficulty="{{obj.difficulty}}"
+        data-time="{{obj.time}}"
+        data-pass = "{{obj.required_score_to_pass}}"
+        data-toggle="modal"
+        data-target="#quizStartModal">
+        {{obj.name}} -->
+                <p>{{obj.name}}</p>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                   
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>{{obj.difficulty}} </h6>
+                                           
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>{{obj.time}}</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions: 
+                                                        <span>{{obj.number_of_questions}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                      
+                                      
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                    <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                        <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                       
+                                            
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                    <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-quiz">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="quiz-img">
+                                            <img src={% static "media/aboutus1.jpg" %} alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="quiz-desc">
+                                            <h4>Are you eco-friendly person?</h4>
+                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque illum ad natus odio harum deleniti
+                                                reiciendis illo eius sequi? Exercitationem, illo? Pariatur nobis iure voluptatibus, reprehenderit suscipit
+                                                maxime aperiam.</h6>
+                                    
+                                            <div class="all-quiz-det">
+                                                <div class="quiz-detail">
+                                                    <div class="time">
+                                                    <img src={% static "media/aaa27.png" %} alt="">
+                                                        <span>20 minutes</span>
+                                                    </div>
+                                                    <div class="questions">
+                                                        Questions:
+                                                        <span>15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quiz-but">
+                                                <a href="#">Take Quiz</a>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+               
+                
+                </div>
+            </div>
+            
+        </div>
+    </section>
+{% endblock content %}

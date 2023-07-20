@@ -1,0 +1,38 @@
+
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoTeach</title>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{% static 'mstyle.css' %}">
+        <link rel="stylesheet" href="{% static 'mstyle.css' %}">
+        <link rel="stylesheet" href="{% static 'Vendors/bootstrap.css' %}">
+    </head>
+    <body>
+        <section>
+            <div class="all-body">
+                <div class="pop-up">
+                    <h2>Pictures have been successfully uploaded</h2>
+                    <div class="chal-buts">
+                        <button onclick="singlechallenge">Go back</button>
+                        <!-- <a href="home/"><input type=button class="button" value="Return to Homepage"></a> --><button href="home">Return Homepage</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="{% static 'Vendors/Jquery/jquery-3.5.1.min.js"' %}></script>
+        <script src="{% static 'Js/Main.js' %}"></script>
+    </body>
+</html>

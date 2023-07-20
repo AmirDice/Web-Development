@@ -1,0 +1,29 @@
+input.form-control {
+  text-transform: none;
+}
+
+body {
+  margin-top: 10%;
+  text-transform: none;
+  height: auto;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+
+  border-top: 1px springgreen solid;
+  border-bottom: 1px springgreen solid;
+  border-radius: 10px;
+}
+
+input.form.group {
+  text-transform: none;
+}
+
+.form {
+  width: 70%;
+  left: 15%;
+  justify-content: center;
+  position: relative;
+}

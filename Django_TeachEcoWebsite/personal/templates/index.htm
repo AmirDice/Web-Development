@@ -1,0 +1,476 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load account %}
+
+
+    <!-- home section-->
+    <head>
+
+        <link href="{% static 'fontawesome-free-5.15.4-web/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesome-free-5.15.4-web/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesome-free-5.15.4-web/css/solid.css' %}" rel="stylesheet" type="text/css">
+    </head>
+
+    <section class="home" id="home">
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay="autoplay" loop="loop" muted="muted">
+                <source src={% static "media/video3.mp4" %} type="video/mp4">
+            </video>
+        </div>
+        <div class="content">
+            <h1>save earth and save lives</h1>
+            <h2>write something here!</h2>
+            <a href="blog.htm">
+                <button class="btn">explore.</button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- home section -->
+
+    <!-- News Section -->
+
+    <section class="news" id="news">
+
+        <h1 class="heading">
+            <img src={% static "media/aaa23.png" %} alt="">
+            News
+            <img src={% static "media/aaa24.png" %} alt="">
+
+        </h1>
+        
+        <div class="container">
+            
+            {% comment %} <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ value.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ value.title }}</h5>
+                <p class="card-text">{{ value.description|truncatechars:150 }}</p>
+                <a href="{{ value.url }}" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div> {% endcomment %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="news-slider" class="owl-carousel">
+                        <!-- 1 -->
+                        {% for value in data %}
+                        <div class="news-grid">
+                            <div class="news-grid-image"><img src="{{ value.image }}" alt="">
+                                <div class="news-grid-box">
+                                    <h1>19</h1>
+                                    <p>Sep</p>
+                                </div>
+                            </div>
+                            <div class="news-grid-txt">
+                                <span>Eco-Friendly</span>
+                                <h2>{{ value.title }}</h2>
+                                <ul>
+                                    <li>
+                                        <img  style="width:10%;" src={% static "media/aaa10.png" %} alt="" aria-hidden="true">
+                                        {{ value.publishedat }} ago</li>
+                                    {% comment %} <li style="display:flex;" >
+                                         <img src={% static "media/aaa11.png" %} alt="" aria-hidden="true">
+                                        {{ value.author }}
+                                    </li> {% endcomment %}
+                                </ul>
+                                <p>{{ value.description|truncatechars:150 }}</p>
+                                <a href="{{ value.url }}" target="_blank">Read More...</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% comment %} <!-- 2 -->
+                        <div class="news-grid">
+                            <div class="news-grid-image"><img src="{{ value.image }}" alt="">
+                                <div class="news-grid-box">
+                                    <h1>19</h1>
+                                    <p>Sep</p>
+                                </div>
+                            </div>
+                            <div class="news-grid-txt">
+                                <span>Eco-Friendly</span>
+                                <h2>{{ value.title }}</h2>
+                                <ul>
+                                    <li>
+                                                            <img src={% static "media/aaa10.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.publishedat }} ago</li>
+                                    <li>
+                                                                <img src={% static "media/aaa11.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.author }}</li>
+                                </ul>
+                                <p>{{ value.description|truncatechars:150 }}</p>
+                                <a href="{{ value.url }}" target="_blank">Read More...</a>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="news-grid">
+                            <div class="news-grid-image"><img src="{{ value.image }}" alt="">
+                                <div class="news-grid-box">
+                                    <h1>19</h1>
+                                    <p>Sep</p>
+                                </div>
+                            </div>
+                            <div class="news-grid-txt">
+                                <span>Eco-Friendly</span>
+                                <h2>{{ value.title }}</h2>
+                                <ul>
+                                    <li>
+                                            <img src={% static "media/aaa10.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.publishedat }} ago</li>
+                                    <li>
+                                                                <img src={% static "media/aaa11.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.author }}</li>
+                                </ul>
+                                <p>{{ value.description|truncatechars:150 }}</p>
+                                <a href="{{ value.url }}" target="_blank">Read More...</a>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="news-grid">
+                            <div class="news-grid-image"><img src="{{ value.image }}" alt="">
+                                <div class="news-grid-box">
+                                    <h1>19</h1>
+                                    <p>Sep</p>
+                                </div>
+                            </div>
+                            <div class="news-grid-txt">
+                                <span>Eco-Friendly</span>
+                                <h2>{{ value.title }}</h2>
+                                <ul>
+                                    <li>
+                                        <img src={% static "media/aaa10.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.publishedat }} ago</li>
+                                    <li>
+                                        <img src={% static "media/aaa11.png" %} alt="" aria-hidden="true">
+
+                                        {{ value.author }}</li>
+                                </ul>
+                                <p>{{ value.description|truncatechars:150 }}</p>
+                                <a href="{{ value.url }}" target="_blank">Read More...</a>
+                            </div> {% endcomment %}
+                        </div>
+                        </div>
+                    </div>   
+            
+                </div>
+            </div>
+        </div>
+            
+        <!-- Script-Section -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#news-slider").owlCarousel({
+                    items: 3,
+                    navigation: true,
+                    navigationText: [
+                        "", ""
+                    ],
+                    autoPlay: true
+                });
+            });
+        </script>
+
+        <script>
+
+$(document).ready(function() {
+    console.log( "ready!" );
+    el = document.getElementsByClassName("text-muted")
+    for (i = 0; i < el.length; i++) {
+        t = document.getElementsByClassName("text-muted")[i].innerText
+        var d = new Date(t)
+        document.getElementsByClassName("text-muted")[i].innerText = d.toDateString()
+    }
+});
+var page = 2;
+var window_scroll = true;
+var search = "{{ search }}";
+
+window.addEventListener('scroll', function(e) {
+    // scroll check
+    console.log("scroll check...")
+    if(window_scroll){
+        if((window.innerHeight + window.scrollY) >= (document.body.scrollHeight-200)){
+            window_scroll = false;
+            document.getElementById("loading").style.display = "block";
+            $.ajax({
+                url: '/next?page=' + page + '&search=' + search,
+                dataType: 'json',
+                success: function (data) {
+                    if (data["success"]) {
+                        articles = data["data"]
+                        articles_html = ''
+                        for (i = 0; i < articles.length; i++) {
+                            articles_html += ' \
+                            <div class="card mb-3 box" style="max-width: 640px; margin:auto;">\
+                                <div class="row">\
+                                    <div class="col-md-8">\
+                                        <div class="card-body">\
+                                            <h5 class="card-title"><a href="'+ articles[i]["url"] +'" target="_blanck">'+ articles[i]["title"] +'</a></h5>\
+                                            <p class="card-text">'+ articles[i]["description"] +'</p>\
+                                            <p class="card-text"><small class="text-muted">'+ articles[i]["publishedat"] +'</small></p>\
+                                        </div>\
+                                    </div>\
+                                            \
+                                    <div class="col-md-4 img-box">\
+                                        <img src="'+ articles[i]["image"] +'" class="card-img" alt="..." height="100%">\
+                                    </div>\
+                                </div>\
+                            </div>\
+                            '
+                        }
+                        $("#articles-container").append(articles_html);
+                        page += 1
+                        window_scroll = true;
+                        document.getElementById("loading").style.display = "none";
+                    }
+                    else {
+                        console.log("Failed")
+                        window_scroll = true;
+                        document.getElementById("loading").style.display = "none";
+                    }
+                }
+            });
+        }
+    }
+})
+</script>
+    </section>
+
+    <!--Interesting facts-->
+    <section class="facts" id="facts">
+        <h1 class="heading">
+            <img src={% static "media/aaa23.png" %} alt="">
+            interesting facts
+            <img src={% static "media/aaa24.png" %} alt="">
+        </h1>
+        <div class="container">
+            <div class="interesting-facts">
+                <div class="single-fact">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src={% static "media/facts.png" %} alt="">
+                        </div>
+                        <div class="col-8">
+                            <div class="fact-content">
+                                <span class="date">21 October 2021</span>
+                                <div style="display:flex;" class="title">Did you know ?
+
+                                </div>
+                                <div class="text">The world has over 3.04 trillion trees in the world. However,
+                                    27,000 of them are cut down daily to make toilet paper. This translates to about
+                                    9.8 million trees annually.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-fact">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src={% static "media/facts.png" %} alt="">
+                        </div>
+                        <div class="col-8">
+                            <div class="fact-content">
+                                <span class="date">1st December 2021</span>
+                                <div class="title">Did you know ?
+                                </div>
+                                <div class="text">On average, Americans use about 2,500,000 plastic bottles every hour and over the course of a year, Americans typically throw away 25 trillion Styrofoam cups.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-fact">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src={% static "media/facts.png" %} alt="">
+                        </div>
+                        <div class="col-8">
+                            <div class="fact-content">
+                                <span class="date">10 October 2021</span>
+                                <div class="title">Did you know ?
+                                </div>
+                                <div class="text">As many as 1,000,000 sea creatures are killed every year from single-use plastic bags and other plastic garbage that ends up in the ocean..</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script-Section -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#facts").sliders({
+                    items: 3,
+                    navigation: true,
+                    navigationText: [
+                        "", ""
+                    ],
+                    autoPlay: true
+                });
+            });
+        </script>
+    </section>
+
+    <!--Interesting facts end-->
+    <!--News section end-->
+
+    <!-- Post Section-->
+
+    <!-- <section class="post" id="post"> <h1 class="heading"> <i class="fas
+    fa-quote-left"></i> recent posts <i class="fas fa-quote-right"></i> </h1> <div
+    class="box-container"> <div class="box"> <img src="media/climate3.jfif" alt="">
+    <div class="content"> <span> <i class="fas fa-calendar"></i> Oct 25, 2021
+    </span> <h3>Extreme weather renews focus on climate change as scientists update
+    forecasts</h3> <p>Description</p> <a href="articles.htm"><button
+    class="btn">read more</button></a> </div> </div> <div class="box"> <img
+    src="media/climate2.jpg" alt=""> <div class="content"> <span> <i class="fas
+    fa-calendar"></i> Oct 17, 2021 </span> <h3>Earth already feeling irreversible
+    impacts of climate change</h3> <p>Description</p> <a href="articles.htm"><button
+    class="btn">read more</button></a> </div> </div> <div class="box"> <img
+    src="media/climate1.jpg" alt=""> <div class="content"> <span> <i class="fas
+    fa-calendar"></i> Oct 18, 2021 </span> <h3>Climate Change: Everything You Need
+    to Know</h3> <p>Description</p> <a href="articles.htm"><button class="btn">read
+    more</button></a> </div> </div> </div> </section> -->
+
+    <!-- Post Section end -->
+
+    <!-- about section starts -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading">
+            <img src={% static "media/aaa23.png" %} alt="">
+           About Us
+            <img src={% static "media/aaa24.png" %} alt="">
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src={% static "media/aboutus4.png" %} alt="">
+            </div>
+
+            <div class="content">
+                <h3>together we can make an impact!</h3>
+                <p>write about us info here..</p>
+                <p>more info</p>
+                <a href="#">
+                    <button class="btn">learn more</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src={% static "media/aaa11.png" %} alt="">
+                <h3>500+</h3>
+                <p>volunteers</p>
+            </div>
+
+            <div class="box">
+                <img src={% static "media/aaa4.png" %} alt="">
+
+                <h3>1000+</h3>
+                <p>trees planted</p>
+            </div>
+
+            <div class="box">
+                <img src={% static "media/aaa8.png" %} alt="">
+                <h3>5+</h3>
+                <p>animals saved</p>
+            </div>
+
+            <div class="box">
+                <img style="width:15%;" src={% static "media/bbb1.png" %} alt="">
+                <h3>100+</h3>
+                <p>donators</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+    <!--donation box-->
+    <section>
+        <h1 class="heading">
+            <img src={% static "media/aaa23.png" %} alt="">
+           Donate
+             <img src={% static "media/aaa24.png" %} alt="">
+        </h1>
+        <div class="dbox" id="dbox">
+            <img src={% static "media/donate-icon-0.jpg" %} alt="coins"/>
+            <h2>Donate</h2>
+            <p>Support TeachEco
+                <br/>Donate below.</p>
+            <a href="https://paypal.me/" target="_blank" class="dbtn paypal">
+                <i class="fab fa-paypal"></i>
+                Paypal
+            </a>
+            <a href="https://patreon.com/" target="_blank" class="dbtn patreon">
+                <i class="fab fa-patreon"></i>
+                Patreon
+            </a>
+        </div>
+    </section>
+    <!--donation box end-->
+
+    <!-- SOCIAL PANEL HTML -->
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <a target="_blank" href="">TeachEco</a>
+        </p>
+        <button class="close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <h4>Get in touch on</h4>
+        <ul>
+            <li>
+                <a href="https://www.patreon.com/" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<button class="floating-btn">
+    Get in Touch
+</button>
+<!-- SOCIAL PANEL HTML END -->
+
+
+<!--custom Js file-->
+<script src="{% static 'Vendors/slick/slick.js' %}"></script>
+<script src="{% static 'Js/Main.js' %}"></script>
+<script src="{% static 'Js/new.js' %}"></script>
+<script src="{% static 'Js/script.js' %}"></script>
+{% endblock content %}

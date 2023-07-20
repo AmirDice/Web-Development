@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'form.css' %}">
+{% if user.is_authenticated %}
+            <h1> Edit Profile </h1>
+            <div class="form">
+                <div class="form-group">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+{% else %}
+<big>This age Does not Exist..</big>
+{% endif %}
+{% endblock content %}
